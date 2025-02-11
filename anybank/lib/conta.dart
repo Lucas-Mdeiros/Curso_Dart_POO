@@ -47,3 +47,15 @@ class ContaPoupanca extends Conta{
     _saldo += _saldo * rendimento;
   }
 }
+
+class ContaSalario extends Conta{
+  String nomeEmpresa;
+  String cnpj;
+
+  ContaSalario(super.titular, super._saldo, this.nomeEmpresa, this.cnpj);
+
+  void imprimeDeposito(){
+    print("O salário da $nomeEmpresa, de CNPJ $cnpj no valor de R\$ $_saldo, foi depositado!");
+  }
+
+}
