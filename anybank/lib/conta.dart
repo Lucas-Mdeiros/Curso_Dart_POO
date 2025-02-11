@@ -22,3 +22,12 @@ class Conta{
   }
   
 }
+
+class ContaCorrente extends Conta {
+  ContaCorrente(super.titular, super._saldo);
+
+}
+
+class ContaPoupanca extends Conta{
+  ContaPoupanca(super.titular, super._saldo);
+}
