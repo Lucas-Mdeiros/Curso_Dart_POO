@@ -34,3 +34,18 @@ void main(){
   diretoria.calcularSalario();
 }
 */
+
+import 'package:desafio_poo3/agendamento.dart';
+
+void main(){
+  Medico medico = Medico();
+  Dentista dentista = Dentista();
+
+  GerenciadorDeAgendamentos gerenciador = GerenciadorDeAgendamentos();
+  gerenciador.adicionarProfissinal(medico);
+  gerenciador.adicionarProfissinal(dentista);
+
+  gerenciador.exibirDuracaoEDisponibilidade();
+
+  
+}
