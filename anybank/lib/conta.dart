@@ -36,13 +36,6 @@ class ContaCorrente extends Conta {
     }
   }
 
-  @override
-  void enviar(double valor){
-    if (_saldo + emprestimo >= valor){
-      _saldo -= valor;
-      imprimeSaldo();
-    }
-  }
 
 }
 
@@ -64,10 +57,5 @@ class ContaSalario extends Conta{
 
   void imprimeDeposito(){
     print("O salário da $nomeEmpresa, de CNPJ $cnpj no valor de R\$ $_saldo, foi depositado!");
-  }
-
-
-  void calculaRendimento(){
-    _saldo += _saldo * rendimento;
   }
 }
