@@ -1,9 +1,31 @@
 mixin ControleAcesso{
-  verificarPermissaoAdmin(String papel){
-    if(papel == "admin"){
-      return true;
+ bool verificarPermissaoAdmin(String papel){
+    return papel == 'admin';
+  }
+
+  void executarOperacao(String papel, Function operacao){
+    if(verificarPermissaoAdmin(papel)){
+      operacao();
     }else{
-      return false;
+      print('Acesso negado');
     }
   }
 }
+
+
+
+class ServicoUsuario with ControleAcesso{
+
+  void deletarUsuario(){
+    executarOperacao('admin', () => print('Usuario deletado'));
+  }
+
+}
+
+class ServicoProduto with ControleAcesso{
+
+  void  adicionarProduto(){
+    executarOperacao('admin', () => print('Produto adicionado'));
+  }
+}
+

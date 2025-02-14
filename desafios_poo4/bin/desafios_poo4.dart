@@ -1,5 +1,7 @@
 //import 'package:desafios_poo4/bagagem.dart';
 
+import 'package:desafios_poo4/acesso.dart';
+
 void main() {
   /** 
   Passagem passagemTeste = PassagemComBagagem("Lucas", 1000);
@@ -10,5 +12,9 @@ void main() {
   double preco = passagemTesteSem.calcularPrecoFinal();
   print(preco);
   */
-  
+  ServicoUsuario servico = ServicoUsuario();
+  ServicoProduto produto = ServicoProduto();
+  servico.deletarUsuario();
+  produto.adicionarProduto();
+
 }
