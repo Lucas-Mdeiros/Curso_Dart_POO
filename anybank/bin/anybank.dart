@@ -5,8 +5,9 @@ void main() {
   ContaCorrente contaChris = ContaCorrente("Chris", 4000);
   ContaPoupanca contaDenize = ContaPoupanca("Denize", 4000);
   ContaSalario contaCatarina = ContaSalario("Catarina", 5000,"Sicoob Credipinho", "11.111.111/0001-01");
-
-  List<Conta> contas = <Conta>[contaDenize, contaChris, contaCatarina];
+  Conta contaMatheus = ContaEmpresa("Matheus", 2000);
+  Conta contaRoberta = ContaInvestimento("Roberta", 1500);
+  List<Conta> contas = <Conta>[contaDenize, contaChris, contaCatarina, contaMatheus];
   for(Conta conta in contas){
     conta.imprimeSaldo();
   }
@@ -17,4 +18,7 @@ void main() {
 
   contaCatarina.imprimeSaldo();
   contaCatarina.imprimeDeposito();
+
+  contaMatheus.enviar(100);
+  contaRoberta.receber(100);
 }
